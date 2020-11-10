@@ -1,0 +1,151 @@
+:root {
+    --mainFont: 'Russo One';
+    --secondaryfont: sans-serif;
+    --red: #e7305b;
+    --black: #07031a;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--mainFont);
+}
+
+ .nav-bar {
+     width: 100%;
+     height: 90%;
+     writing-mode: vertical-lr;
+     display: flex;
+     justify-content: space-between;
+     position: absolute;
+     top: 50%;
+     transform: translateY(-50%);
+ }
+ ul li {
+     display: inline-block;
+    margin: 1em;
+    font-size: 1.5rem;
+    color: var(--red);
+ }
+ .active {
+     border: 4px solid var(--black);
+     padding: 15px 0;
+ }
+
+ .span{
+    width: 5px;
+    height: 5rem;
+    margin-left: .3rem;
+    background-color: red;
+    animation: span 3s linear forwards;
+    transition: 1s ease;
+    position: relative;
+ }
+
+ .span:before {
+     content:'';
+position: absolute;
+background: var(--black);
+width: 5px;
+height: 10px;
+top: -20%;
+ }
+ .span:after {
+    content:'';
+position: absolute;
+background: var(--black);
+width: 5px;
+height: 10px;
+bottom: -20%;
+}
+
+ @keyframes span {
+     0%{
+         height: 0;
+         opacity: 0;
+     }
+    
+ }
+
+ .text {
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%,-50%);
+     font-size: 6rem;
+     color: var(--red);
+ }
+ .text:before {
+     content: '';
+     position: absolute;
+     width: 100%;
+     height: 5px;
+     background-color: var(--black);
+     left: -50%;
+     animation: left-slide 1s linear forwards;
+ }
+ .text:after {
+     content: '';
+     position: absolute;
+     width: 100%;
+     height: 5px;
+     background-color: var(--red);
+     right: -50%;
+     bottom: 0;
+     animation: right-slide 1s linear forwards;
+ }
+ @keyframes left-slide {
+     0% {
+         left: 50%;
+         height: 0px;
+     }
+ }
+ @keyframes right-slide {
+     0% {
+         right: 50%;
+         height: 0px;
+     }
+ }
+
+ .text-span {
+     font-size: 4rem;
+     margin-left: 30%;
+     
+ }
+ .big-text {
+     font-size: 8rem;
+   
+     background-image: url(code.jpg);
+     background-size: contain;
+    -webkit-background-clip: text; 
+    background-clip: text; 
+     -webkit-text-fill-color: transparent; 
+         
+         
+ }*
+
+ /*.text {
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%,-50%);
+     font-size: 3rem;
+     
+ }
+
+ .text-span {
+     font-size: 2rem;
+     margin-left: 30%;
+ }
+ .big-text {
+     font-size: 6rem;
+   
+     background-image: url(code.jpg);
+     background-size: contain;
+    -webkit-background-clip: text; 
+    background-clip: text; 
+     -webkit-text-fill-color: transparent; 
+         
+         
+ }*/
